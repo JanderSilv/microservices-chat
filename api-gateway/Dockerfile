@@ -1,8 +1,6 @@
 FROM node:14
 
-# COPY . /apt/app
-
-WORKDIR /apt/app
+WORKDIR /opt/app
 
 RUN yarn
 
