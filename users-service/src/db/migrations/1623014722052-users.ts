@@ -17,7 +17,7 @@ export class Users1623014722052 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            length: '60',
+            length: '70',
             name: 'passwordHash',
             type: 'char',
           },
