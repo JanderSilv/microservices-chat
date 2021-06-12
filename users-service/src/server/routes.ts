@@ -128,6 +128,20 @@ const setupRoutes = (app: Express) => {
       return next(err);
     }
   });
+
+  app.get('/users/byName/:username', async (req, res, next) => {
+    try {
+      const user = await userRepository.findOne({
+        username: req.params.username,
+      });
+
+      if (!user) return next(new Error('Invalid username!'));
+
+      return res.json(user);
+    } catch (err) {
+      return next(err);
+    }
+  });
 };
 
 export default setupRoutes;
