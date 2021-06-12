@@ -17,7 +17,7 @@ const schema = gql`
   }
   type Query {
     userSession(me: Boolean!): UserSession
-    showUser(me: Boolean!): User
+    showUser(username: String!): User
   }
 `;
 
