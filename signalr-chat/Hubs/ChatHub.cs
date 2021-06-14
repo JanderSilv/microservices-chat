@@ -33,7 +33,7 @@ namespace Chat.Hubs
         public async Task SendMessage(ChatMessage chat)
         {
             //Ao usar o método Client(_connections.GetUserId(chat.destination)) eu estou enviando a mensagem apenas para o usuário destino, não realizando broadcast
-            await Clients.AllExcept(_connections.GetUserId(chat.Sender)).SendAsync("Receive", chat.Sender, chat.Message);
+            await Clients.All.SendAsync("Receive", chat.Sender, chat.Message);
         }
     }
 }
