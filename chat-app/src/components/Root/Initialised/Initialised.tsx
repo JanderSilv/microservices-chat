@@ -16,8 +16,8 @@ const Initialised = () => {
     <Switch>
       <PrivateRoute allowVisit={!userSession} component={Login} path="/login" redirectTo="/" />
       <PrivateRoute allowVisit={!userSession} component={SignUp} path="/criar-conta" redirectTo="/" />
-      <PrivateRoute allowVisit={!!userSession} component={Main} path="/" redirectTo="/login" exact />
-      <PrivateRoute allowVisit={!!userSession} component={Chat} path="/chat" redirectTo="/login" />
+      <PrivateRoute allowVisit={!userSession} component={Main} path="/" redirectTo="/login" exact />
+      <Route component={Chat} path="/chat"  />
     </Switch>
   );
 };

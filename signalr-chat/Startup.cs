@@ -33,7 +33,7 @@ namespace SignalRChat
     {
         policy.AllowAnyHeader()
             .AllowAnyMethod().AllowAnyOrigin()
-            .WithOrigins("http://localhost:3000")
+            .WithOrigins("http://localhost:7001")
             .AllowCredentials();
     });
 });

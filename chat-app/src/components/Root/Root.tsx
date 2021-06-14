@@ -26,7 +26,7 @@ const query = gql`
 `;
 
 const Root = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [, setUserSession] = useRecoilState(userSessionAtom);
 
   useEffect(() => {

@@ -29,10 +29,10 @@ const Chat = () => {
                 .then(result => {
                     console.log('Connected!');
     
-                    connection.on('ReceiveMessage', (message:IMessage) => {
+                    connection.on('Receive', (message:IMessage) => {
                         const updatedChat = [...latestChat.current];
                         updatedChat.push(message);
-                    
+                        console.log(message)
                         setChat(updatedChat);
                     });
 
