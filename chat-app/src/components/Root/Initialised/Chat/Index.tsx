@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 
 import ChatWindow from './ChatWindow';
@@ -10,6 +10,7 @@ const Chat = () => {
   const [connection, setConnection] = useState<HubConnection | null>(null);
   const [chat, setChat] = useState<IMessage[]>([]);
   const latestChat = useRef<any | null>(null);
+  const [connected, setConnected] = useState(false);
 
   latestChat.current = chat;
 
@@ -34,6 +35,8 @@ const Chat = () => {
 
             setChat(updatedChat);
           });
+
+          setConnected(true);
         })
         .catch(e => console.log('Connection failed: ', e));
     }
@@ -45,12 +48,13 @@ const Chat = () => {
       message: message
     };
 
-
-    try {
-      await connection?.send('SendMessage', chatMessage);
-    }
-    catch (e) {
-      console.log(e);
+    if (connected) {
+      try {
+        await connection?.send('SendMessage', chatMessage);
+      }
+      catch (e) {
+        console.log(e);
+      }
     }
 
   }

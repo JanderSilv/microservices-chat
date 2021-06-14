@@ -32,7 +32,7 @@ namespace SignalRChat
     options.AddPolicy("ClientPermission", policy =>
     {
         policy.AllowAnyHeader()
-            .AllowAnyMethod()
+            .AllowAnyMethod().AllowAnyOrigin()
             .WithOrigins("http://localhost:3000")
             .AllowCredentials();
     });
