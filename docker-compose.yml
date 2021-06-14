@@ -56,3 +56,12 @@ services:
     image: mysql:5.7.20
     ports:
       - '7201:3306'
+
+  sum-service:
+    build:
+      context: '.'
+      dockerfile: './sum-service/Dockerfile'
+    ports:
+      - '7400:7400'
+    volumes:
+      - ./sum-service:/opt/app

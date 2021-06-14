@@ -14,6 +14,7 @@ const schema = gql`
     createUser(password: String!, username: String!): User!
     createUserSession(password: String!, username: String!): UserSession!
     deleteUserSession(me: Boolean!): Boolean!
+    sum(num1: Int!, num2: Int!): String
   }
   type Query {
     userSession(me: Boolean!): UserSession
