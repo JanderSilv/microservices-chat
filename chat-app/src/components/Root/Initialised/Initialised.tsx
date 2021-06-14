@@ -7,6 +7,7 @@ import PrivateRoute from "#utils/components/routing/PrivateRoute";
 import Login from "./Login";
 import Main from "./Main";
 import SignUp from "./SignUp";
+import Chat from "./Chat";
 
 const Initialised = () => {
   const [userSession] = useRecoilState(userSessionAtom);
@@ -16,6 +17,7 @@ const Initialised = () => {
       <PrivateRoute allowVisit={!userSession} component={Login} path="/login" redirectTo="/" />
       <PrivateRoute allowVisit={!userSession} component={SignUp} path="/criar-conta" redirectTo="/" />
       <PrivateRoute allowVisit={!!userSession} component={Main} path="/" redirectTo="/login" exact />
+      <PrivateRoute allowVisit={!!userSession} component={Chat} path="/chat" redirectTo="/login" />
     </Switch>
   );
 };

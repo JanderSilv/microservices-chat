@@ -19,6 +19,7 @@
     "@apollo/client": "~3.3.19",
     "@blueprintjs/core": "~3.41.0",
     "@blueprintjs/icons": "~3.25.1",
+    "@microsoft/signalr": "^5.0.7",
     "graphql": "~15.5.0",
     "normalize.css": "~8.0.1",
     "react": "~17.0.1",
