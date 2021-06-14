@@ -2,24 +2,24 @@ import React from 'react';
 
 import Message from './Message';
 
-interface IMessage{user: string,message:string}
+interface IMessage { user: string, message: string }
 
-interface IProps{
-   chat: IMessage[]
+interface IProps {
+  chat: IMessage[]
 }
 
-const ChatWindow = (props:IProps) => {
-    const chat = props.chat
-        .map(m => <Message 
-            key={Date.now() * Math.random()}
-            user={m.user}
-            message={m.message}/>);
+const ChatWindow = (props: IProps) => {
+  const chat = props.chat
+    .map(m => <Message
+      key={Date.now() * Math.random()}
+      user={m.user}
+      message={m.message} />);
 
-    return(
-        <div>
-            {chat}
-        </div>
-    )
+  return (
+    <div>
+      {chat}
+    </div>
+  )
 };
 
 export default ChatWindow;
