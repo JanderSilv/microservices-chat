@@ -15,14 +15,10 @@ services:
   chat-service:
     build:
       context: '.'
-      dockerfile: './chat-service/Dockerfile'
-    depends_on:
-      - chat-service-db
+      dockerfile: './signalr-chat/Dockerfile'
     ports:
-      - '7100:7100'
-    volumes:
-      - ./chat-service:/opt/app
-
+      - '5001:5001'
+    
   chat-service-db:
     environment:
       - MYSQL_ROOT_PASSWORD=password

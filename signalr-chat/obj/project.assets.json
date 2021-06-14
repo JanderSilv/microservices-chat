@@ -1889,11 +1889,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\Dev\\Projects\\SignalRChat\\SignalRChat.csproj",
+      "projectUniqueName": "U:\\Dev\\Projects\\microservices-chat\\signalr-chat\\SignalRChat.csproj",
       "projectName": "SignalRChat",
-      "projectPath": "U:\\Dev\\Projects\\SignalRChat\\SignalRChat.csproj",
+      "projectPath": "U:\\Dev\\Projects\\microservices-chat\\signalr-chat\\SignalRChat.csproj",
       "packagesPath": "C:\\Users\\ruann\\.nuget\\packages\\",
-      "outputPath": "U:\\Dev\\Projects\\SignalRChat\\obj\\",
+      "outputPath": "U:\\Dev\\Projects\\microservices-chat\\signalr-chat\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ruann\\AppData\\Roaming\\NuGet\\NuGet.Config"

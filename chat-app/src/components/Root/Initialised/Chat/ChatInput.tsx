@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const ChatInput = (props) => {
+interface IProps{
+    sendMessage : (user:string, message:string) => void
+}
+
+const ChatInput = (props:IProps) => {
     const [user, setUser] = useState('');
     const [message, setMessage] = useState('');
 

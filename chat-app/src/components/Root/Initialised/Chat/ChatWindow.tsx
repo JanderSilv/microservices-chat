@@ -1,8 +1,14 @@
 import React from 'react';
 
-import Message from './Message/Message';
+import Message from './Message';
 
-const ChatWindow = (props) => {
+interface IMessage{user: string,message:string}
+
+interface IProps{
+   chat: IMessage[]
+}
+
+const ChatWindow = (props:IProps) => {
     const chat = props.chat
         .map(m => <Message 
             key={Date.now() * Math.random()}
